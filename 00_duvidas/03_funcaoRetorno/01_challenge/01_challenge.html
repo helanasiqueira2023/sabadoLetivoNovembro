@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custo da Viagem</title>
+</head>
+
+<body>
+    <label for="diasDestino">Quantos dias deseja ficar no destino?</label>
+    <input type="number" id="diasDestino">
+    <br />
+    <label for="valorDiaria">Qual o valor da diária do hotel?</label>
+    <input type="number" id="valorDiaria">
+    <br />
+    <label for="alugarCarro">Deseja alugar um carro?</label>
+    <input type="checkbox" id="alugarCarro" checked="true">
+    <br />
+    <label for="valorDiariaCarro">Qual o valor da diária do carro?</label>
+    <input type="number" id="valorDiariaCarro">
+    <br />
+    <label for="seguroCarro">Deseja contratar seguro do carro?</label>
+    <input type="checkbox" id="seguroCarro" checked="true">
+    <br />
+    <label for="tipoSeguroCarro">Qual o tipo de seguro do carro?</label>
+    <select name="tipoSeguroCarro" id="tipoSeguroCarro">
+        <option value="1">Seguro total</option>
+        <option value="2">Seguro parcial</option>
+        <option value="3">Seguro contra roubos</option>
+        <option value="4">Seguro contra terceiros</option>
+        <option value="5">Não contratar seguro</option>
+    </select>
+    <br />
+    <input type="button" id="calcular" value="Calcular">
+    <br />
+    <p id="resultado"></p>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
+
+<script>
+    /*
+    Custo da Viagem
+
+    O programa deverá perguntar por quantos dias deseja ficar no destino. Caso o usuário informar um número de dias inválido, o programa deverá exibir uma mensagem de erro e perguntar novamente por quantos dias deseja ficar no destino. O programa só irá prosseguir se o usuário informar número de dias corretamente, sem ultrapassar o limite de 30 dias.
+
+    O programa deverá perguntar o valor da diária do hotel. Caso o usuário informar um valor inválido, o programa deverá exibir uma mensagem de erro e perguntar novamente o valor da diária do hotel. Apenas deixe o usuário prosseguir se o valor estiver informado corretamente.
+
+    O programa deverá também perguntar se o usuário deseja alugar um carro. Caso responda positivamente, o programa deverá perguntar o valor do aluguel do carro. Apenas deixe o programa prosseguir se o usuário informar um número corretamente.
+    ***Dica: Use função para calcular o valor do aluguel do carro, considerando o preço da diária do veículo e a quantidade de dias que ficará no destino.
+
+    Se o usuário quiser alugar um carro, o programa deverá perguntar se deseja contratar seguro do veículo. Caso deseja contratar, deverá apresentar as seguintes opções:
+    -> 1: Contratar seguro total -> 8% a mais do preço do aluguel do carro por dia
+    -> 2: Contratar seguro parcial -> 5% a mais do preço do aluguel do carro por dia
+    -> 3: Contratar seguro contra roubos -> 4% a mais do preço do aluguel do carro por dia
+    -> 4: Contratar seguro contra terceiros -> 3% a mais do preço do aluguel do carro por dia
+    -> 5: Não contratar seguro
+    ***Dica: Use função para calcular o valor do seguro do carro, considerando o tipo de seguro que o usuário escolheu e a respectiva regra, que fala sobre o valor do seguro ser um percentual do valor da diária do carro.
+
+    Calcule e apresente os valores que o usuário irá gastar durante toda a viagem.
+    */
+
+</script>

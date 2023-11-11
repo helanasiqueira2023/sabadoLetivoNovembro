@@ -1,0 +1,40 @@
+<meta charset="UTF-8">
+<script>
+    // Tanto faz: Operador Ternário ou Switch...Case
+    /*
+    Problema: Considere que uma pessoa está em um mercado e foi comprar uma certa quantidade de Bebida (apenas uma bebida). Peça para ela informar a quantidade que deseja comprar daquela bebida, sendo que as bebidas possíveis são:
+    Refrigerante (RF): R$ 4,50
+    Água Sem Gás (AS): R$ 2,90
+    Água Com Gás (AC): R$ 3,00
+    Suco Natural (SN): R$ 3,90
+    O usuário informará uma das opções citadas acima para compra.
+    Calcule qual o valor final da compra. Caso o valor ultrapasse R$ 150,00, haverá um desconto de 10% no valor da compra.
+    Apresente o resultado final a ser pago pelo comprador da bebida.
+    */
+
+    //Entrada
+    const tipoBebida = prompt(`Qual bebida você deseja comprar? \nRF - Refrigerante \nAS - Água Sem Gás \nAC - Água Com Gás \nSN - Suco Natural`).trim().toUpperCase();
+    const quantidade = Number(prompt(`Quantidade comprada: `));
+    
+    //Processamento
+    let valorTotal = 0;
+    (tipoBebida == `RF`) ? valorTotal = quantidade * 4.5
+        : (tipoBebida == `AS`) ? valorTotal = quantidade * 2.9
+        : (tipoBebida == `AC`) ? valorTotal = quantidade * 3
+        : (tipoBebida == `SN`) ? valorTotal = quantidade * 3.9
+            : alert(`Bebida inválida!`);
+    
+    (valorTotal > 150) ? valorTotal = valorTotal * 0.9 : valorTotal;
+    
+    //Saída
+    alert(`Custo: R$ ${valorTotal.toFixed(2)}`);
+    
+    /*
+    Para testar:
+    Entradas: Quantidade de bebida (número) e Tipo da Bebida (RF, AS, AC ou SN)
+    - Informando 35 (quantidade) e RF (tipo da bebida), a resposta será "Custo: R$ 141,75"
+    - Informando 35 (quantidade) e AS (tipo da bebida), a resposta será "Custo: R$ 101,50"
+    - Informando 35 (quantidade) e AC (tipo da bebida), a resposta será "Custo: R$ 105,00"
+    - Informando 35 (quantidade) e SN (tipo da bebida), a resposta será "Custo: R$ 136,50"
+    */
+</script>
